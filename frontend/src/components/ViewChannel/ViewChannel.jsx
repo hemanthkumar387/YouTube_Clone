@@ -324,7 +324,18 @@ const ViewChannel = () => {
 
               <div className="channel-form-actions">
                 <button type="submit">Upload</button>
-                <button type="button" onClick={() => setShowModal(false)}>
+                <button type="button" onClick={() => { 
+                  setShowModal(false);
+                  setFormData({
+                    title: "",
+                    description: "",
+                    thumbnailUrl: "",
+                    videoUrl: "",
+                    category: "",
+                    _id: ""
+                  });
+                }}
+                >
                   Cancel
                 </button>
               </div>
